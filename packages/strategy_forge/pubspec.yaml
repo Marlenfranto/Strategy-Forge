@@ -3,7 +3,7 @@ description: >-
   An embeddable Flutter strategy editor with configurable layouts, drawing
   tools, markers, JSON persistence, and PNG export.
 version: 0.1.0
-homepage: https://github.com/Marlenfranto/Strategy-Forge
+homepage: https://marlenfranto.github.io/Strategy-Forge/
 repository: https://github.com/Marlenfranto/Strategy-Forge
 issue_tracker: https://github.com/Marlenfranto/Strategy-Forge/issues
 documentation: https://github.com/Marlenfranto/Strategy-Forge/tree/main/packages/strategy_forge

@@ -1,5 +1,7 @@
 # Strategy Forge demo
 
+[Live web demo](https://marlenfranto.github.io/Strategy-Forge/) · [Reusable package](packages/strategy_forge) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge)
+
 This repository contains two Flutter projects:
 
 - **Demo app** — the application at the repository root shows how a host app configures, embeds, persists, and exports a strategy editor.

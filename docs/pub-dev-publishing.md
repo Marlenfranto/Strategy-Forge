@@ -10,6 +10,7 @@ This checklist prepares `packages/strategy_forge` for a public release. It does 
 - Minimum SDKs: Dart 3.6 and Flutter 3.27
 - Supported platforms: Android, iOS, Linux, macOS, web, and Windows
 - Repository: <https://github.com/Marlenfranto/Strategy-Forge>
+- Live demo: <https://marlenfranto.github.io/Strategy-Forge/>
 - Pub.dev name search on 24 September 2026: no matching package was returned. Availability is not reserved until the first publication, so check again immediately before publishing.
 
 ## Account preparation

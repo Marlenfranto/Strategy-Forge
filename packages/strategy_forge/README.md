@@ -1,5 +1,7 @@
 # Strategy Forge
 
+[Live web demo](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
+
 Strategy Forge is an embeddable Flutter strategy editor. It provides the canvas, editing behavior, responsive controls, document model, undo/redo history, JSON serialization, PNG generation, a complete tool catalog, and default tool artwork.
 
 The package is intentionally domain-neutral:
