@@ -37,7 +37,6 @@ The full package feature and API reference is in the [Strategy Forge package REA
 | [`packages/strategy_forge/example/lib/demo_strategy_tool_kits.dart`](packages/strategy_forge/example/lib/demo_strategy_tool_kits.dart) | Optional host-side tool ID lists for 60 sports and variants. |
 | [`packages/strategy_forge/example/assets/rinks`](packages/strategy_forge/example/assets/rinks) | Example-only background images. These do not belong to the package library. |
 | [`packages/strategy_forge`](packages/strategy_forge) | Reusable Flutter package. |
-| [`docs/sports-strategy-tool-audit.md`](docs/sports-strategy-tool-audit.md) | Research notes and the strategy-tool capability audit. |
 | [`packages/strategy_forge/example/test`](packages/strategy_forge/example/test) | Example widget and integration-contract tests. |
 
 ## Requirements
@@ -278,8 +277,6 @@ flutter test
 ```
 
 The tests cover compact and tablet layouts, tool configuration, icon overrides, callbacks, JSON restoration, download behavior, bundled assets, document history, selection transforms, and drawing notation.
-
-Package maintainers should follow the [pub.dev publishing checklist](docs/pub-dev-publishing.md). The checklist covers account ownership, verified publishers, release validation, archive review, and the manual publication step. Preparing or pushing this repository does not publish the package.
 
 ## Integration checklist
 

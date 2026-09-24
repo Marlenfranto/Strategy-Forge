@@ -15,6 +15,7 @@ migrate_working_dir/
 .codex/
 AGENTS.md
 skills-lock.json
+docs/
 
 # IntelliJ related
 *.iml
