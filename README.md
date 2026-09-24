@@ -1,15 +1,15 @@
-# Strategy Forge demo
+# Strategy Forge
 
-[Live web demo](https://marlenfranto.github.io/Strategy-Forge/) · [Reusable package](packages/strategy_forge) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge)
+[Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [Reusable package](packages/strategy_forge) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge)
 
-This repository contains two Flutter projects:
+This repository contains the reusable Flutter package and its complete example application:
 
-- **Demo app** — the application at the repository root shows how a host app configures, embeds, persists, and exports a strategy editor.
 - **Reusable package** — [`packages/strategy_forge`](packages/strategy_forge) contains the generic editor, tool catalog, bundled icons, document model, and export APIs.
+- **Example app** — [`packages/strategy_forge/example`](packages/strategy_forge/example) is the package's runnable application and shows how a host configures, embeds, persists, and exports a strategy editor.
 
 Strategy Forge does not contain a sport selector or runtime layout upload flow. The host app defines its layouts in code, chooses the tools for each strategy view, and owns all storage and sharing behavior.
 
-## What the demo covers
+## What the example app covers
 
 - Responsive phone, tablet, and desktop/web layouts.
 - Host-owned image layouts with layout thumbnails and aspect ratios.
@@ -31,18 +31,18 @@ The full package feature and API reference is in the [Strategy Forge package REA
 
 | Path | Purpose |
 | --- | --- |
-| [`lib/main.dart`](lib/main.dart) | Demo shell, `DemoHome` integration contract, callbacks, and PNG saving. |
-| [`lib/demo_layouts.dart`](lib/demo_layouts.dart) | Host-owned sample layouts passed to the package. |
-| [`lib/demo_configurations.dart`](lib/demo_configurations.dart) | Enabled tools, icon overrides, colors, widths, and editor configuration. |
-| [`lib/demo_strategy_tool_kits.dart`](lib/demo_strategy_tool_kits.dart) | Optional host-side tool ID lists for 60 sports and variants. |
-| [`assets/rinks`](assets/rinks) | Demo-only background images. These do not belong to the package. |
+| [`packages/strategy_forge/example/lib/main.dart`](packages/strategy_forge/example/lib/main.dart) | Example shell, `DemoHome` integration contract, callbacks, and PNG saving. |
+| [`packages/strategy_forge/example/lib/demo_layouts.dart`](packages/strategy_forge/example/lib/demo_layouts.dart) | Host-owned sample layouts passed to the package. |
+| [`packages/strategy_forge/example/lib/demo_configurations.dart`](packages/strategy_forge/example/lib/demo_configurations.dart) | Enabled tools, icon overrides, colors, widths, and editor configuration. |
+| [`packages/strategy_forge/example/lib/demo_strategy_tool_kits.dart`](packages/strategy_forge/example/lib/demo_strategy_tool_kits.dart) | Optional host-side tool ID lists for 60 sports and variants. |
+| [`packages/strategy_forge/example/assets/rinks`](packages/strategy_forge/example/assets/rinks) | Example-only background images. These do not belong to the package library. |
 | [`packages/strategy_forge`](packages/strategy_forge) | Reusable Flutter package. |
 | [`docs/sports-strategy-tool-audit.md`](docs/sports-strategy-tool-audit.md) | Research notes and the strategy-tool capability audit. |
-| [`test`](test) | Demo widget and integration-contract tests. |
+| [`packages/strategy_forge/example/test`](packages/strategy_forge/example/test) | Example widget and integration-contract tests. |
 
 ## Requirements
 
-- Flutter with a Dart SDK compatible with `^3.5.2`.
+- Flutter with a Dart SDK compatible with `^3.6.0`.
 - A Flutter target configured by this repository: Android, iOS, web, Windows, macOS, or Linux.
 
 Check your local setup:
@@ -52,11 +52,12 @@ flutter doctor
 flutter devices
 ```
 
-## Run the demo
+## Run the example app
 
-From the repository root:
+From the package example directory:
 
 ```sh
+cd packages/strategy_forge/example
 flutter pub get
 flutter run
 ```
@@ -68,11 +69,11 @@ flutter run -d chrome
 flutter run -d macos
 ```
 
-## Demo configuration
+## Example app configuration
 
 ### Layouts
 
-The demo owns every layout and passes them to `StrategyEditorConfig`. Add or remove layouts in [`lib/demo_layouts.dart`](lib/demo_layouts.dart):
+The example app owns every layout and passes them to `StrategyEditorConfig`. Add or remove layouts in [`demo_layouts.dart`](packages/strategy_forge/example/lib/demo_layouts.dart):
 
 ```dart
 StrategyLayout.asset(
@@ -83,9 +84,9 @@ StrategyLayout.asset(
 )
 ```
 
-Layout IDs are persisted in JSON. Keep an ID stable after saved documents exist. Declare any new demo assets under `flutter.assets` in [`pubspec.yaml`](pubspec.yaml).
+Layout IDs are persisted in JSON. Keep an ID stable after saved documents exist. Declare any new example assets under `flutter.assets` in the [example pubspec](packages/strategy_forge/example/pubspec.yaml).
 
-The demo intentionally has no file picker or layout upload control. Developers decide the available layouts while implementing the host app.
+The example app intentionally has no file picker or layout upload control. Developers decide the available layouts while implementing the host app.
 
 ### Enabled tools
 
@@ -135,7 +136,7 @@ Tools without an override keep the package icon. See the [package icon and marke
 
 ### Colors and line widths
 
-The demo currently uses the package defaults. Supply custom values when creating `StrategyEditorConfig` to change them:
+The example app currently uses the package defaults. Supply custom values when creating `StrategyEditorConfig` to change them:
 
 ```dart
 StrategyEditorConfig(
@@ -152,7 +153,7 @@ Both lists must be non-empty, and every stroke width must be greater than zero.
 
 ## Host callbacks and persistence
 
-`DemoHome` is a working reference wrapper around `StrategyEditorController`. It exposes the following host-facing properties:
+`DemoHome` in the example app is a working reference wrapper around `StrategyEditorController`. It exposes the following host-facing properties:
 
 | Property | Type | Behavior |
 | --- | --- | --- |
@@ -243,7 +244,7 @@ This keeps the reusable editor independent of product infrastructure.
 
 ## Dependencies
 
-### Demo app
+### Example app
 
 | Dependency | Use |
 | --- | --- |
@@ -253,15 +254,16 @@ This keeps the reusable editor independent of product infrastructure.
 | `flutter_lints` | Development lint rules. |
 | `flutter_test` | Demo widget tests. |
 
-The demo's production dependency versions are defined in [`pubspec.yaml`](pubspec.yaml). The reusable package has its own dependency list in [`packages/strategy_forge/pubspec.yaml`](packages/strategy_forge/pubspec.yaml).
+The example app's production dependency versions are defined in its [`pubspec.yaml`](packages/strategy_forge/example/pubspec.yaml). The reusable package has its own dependency list in [`packages/strategy_forge/pubspec.yaml`](packages/strategy_forge/pubspec.yaml).
 
 `public_file_saver` currently depends on browser APIs that prevent a Flutter WASM build. A normal Flutter web JavaScript build is supported by the demo. Applications that require WASM can replace the demo saver through `savePng` and select a WASM-compatible storage implementation.
 
 ## Validation
 
-Run demo checks from the repository root:
+Run example app checks from its directory:
 
 ```sh
+cd packages/strategy_forge/example
 flutter analyze
 flutter test
 ```

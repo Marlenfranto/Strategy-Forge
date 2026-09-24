@@ -1,6 +1,6 @@
 # Strategy Forge
 
-[Live web demo](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
+[Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
 
 Strategy Forge is an embeddable Flutter strategy editor. It provides the canvas, editing behavior, responsive controls, document model, undo/redo history, JSON serialization, PNG generation, a complete tool catalog, and default tool artwork.
 
@@ -636,12 +636,14 @@ flutter test
 
 The package tests cover controller validation and history, JSON round trips, every drawing notation, endpoint arrowheads, text editing, independent selection transforms, responsive controls, icon overrides, primary SVG color replacement, asset packaging, and catalog integrity.
 
-Run the repository-root tests as well when changing the public API or demo integration.
+Run the example app tests as well when changing the public API or integration.
 
-The package includes a standalone example at [`example/main.dart`](example/main.dart). Run it from this directory with:
+The package includes the complete demo as a standalone Flutter application in [`example`](example). Run it with:
 
 ```sh
-flutter run -t example/main.dart
+cd example
+flutter pub get
+flutter run
 ```
 
 Report bugs and request features through the [GitHub issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues).

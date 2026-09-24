@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:strategy_forge_demo/demo_configurations.dart';
-import 'package:strategy_forge_demo/demo_strategy_tool_kits.dart';
-import 'package:strategy_forge_demo/main.dart';
+import 'package:strategy_forge_example/demo_configurations.dart';
+import 'package:strategy_forge_example/demo_strategy_tool_kits.dart';
+import 'package:strategy_forge_example/main.dart';
 import 'package:strategy_forge/strategy_forge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

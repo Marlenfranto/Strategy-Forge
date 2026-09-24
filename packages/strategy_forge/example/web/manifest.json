@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#EEF3F7",
     "theme_color": "#0D2A45",
-    "description": "Strategy Forge multi-sport strategy editor demo.",
+    "description": "Strategy Forge configurable strategy editor example.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

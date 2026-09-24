@@ -1,4 +1,4 @@
-name: Deploy web demo
+name: Deploy example app
 
 on:
   push:
@@ -28,15 +28,6 @@ jobs:
           channel: stable
           cache: true
 
-      - name: Install demo dependencies
-        run: flutter pub get
-
-      - name: Analyze demo
-        run: flutter analyze
-
-      - name: Test demo
-        run: flutter test
-
       - name: Install package dependencies
         working-directory: packages/strategy_forge
         run: flutter pub get
@@ -49,7 +40,20 @@ jobs:
         working-directory: packages/strategy_forge
         run: flutter test
 
-      - name: Build web demo
+      - name: Install example dependencies
+        working-directory: packages/strategy_forge/example
+        run: flutter pub get
+
+      - name: Analyze example app
+        working-directory: packages/strategy_forge/example
+        run: flutter analyze
+
+      - name: Test example app
+        working-directory: packages/strategy_forge/example
+        run: flutter test
+
+      - name: Build example app for web
+        working-directory: packages/strategy_forge/example
         run: flutter build web --release --base-href /Strategy-Forge/
 
       - name: Configure GitHub Pages
@@ -58,7 +62,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: build/web
+          path: packages/strategy_forge/example/build/web
 
   deploy:
     environment:
