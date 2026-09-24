@@ -41,7 +41,8 @@ The full package feature and API reference is in the [Strategy Forge package REA
 
 ## Requirements
 
-- Flutter with a Dart SDK compatible with `^3.6.0`.
+- The reusable package requires Flutter 3.27 or later and Dart 3.6 or later.
+- The example app requires Flutter 3.41 or later and Dart 3.11 or later.
 - A Flutter target configured by this repository: Android, iOS, web, Windows, macOS, or Linux.
 
 Check your local setup:
@@ -227,7 +228,7 @@ DemoHome(
 )
 ```
 
-When `savePng` is omitted, the demo uses `public_file_saver`: a browser download on web and a platform save dialog on native targets. The generated image contains the selected background layout and strategy elements, without the editor controls.
+When `savePng` is omitted, the example app uses `file_saver`: a browser download on web and a platform save dialog on native targets. The generated image contains the selected background layout and strategy elements, without the editor controls.
 
 ## JSON and image data ownership
 
@@ -249,13 +250,13 @@ This keeps the reusable editor independent of product infrastructure.
 | --- | --- |
 | Flutter SDK | UI, rendering, gestures, and platform targets. |
 | Local `strategy_forge` package | Strategy editor and document APIs. |
-| `public_file_saver` | Default PNG download/save behavior in the demo. |
+| `file_saver` | Default PNG download/save behavior in the example app. |
 | `flutter_lints` | Development lint rules. |
 | `flutter_test` | Demo widget tests. |
 
 The example app's production dependency versions are defined in its [`pubspec.yaml`](packages/strategy_forge/example/pubspec.yaml). The reusable package has its own dependency list in [`packages/strategy_forge/pubspec.yaml`](packages/strategy_forge/pubspec.yaml).
 
-`public_file_saver` currently depends on browser APIs that prevent a Flutter WASM build. A normal Flutter web JavaScript build is supported by the demo. Applications that require WASM can replace the demo saver through `savePng` and select a WASM-compatible storage implementation.
+The example app uses the normal Flutter web JavaScript build. Applications with different storage requirements can replace the default saver through `savePng`.
 
 ## Validation
 

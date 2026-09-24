@@ -1,7 +1,7 @@
 import 'package:strategy_forge/strategy_forge.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:public_file_saver/public_file_saver.dart';
+import 'package:file_saver/file_saver.dart';
 
 import 'demo_configurations.dart';
 
@@ -179,20 +179,21 @@ class _DemoHomeState extends State<DemoHome> {
   }
 
   Future<bool> _savePng(Uint8List bytes) async {
-    final saver = PublicFileSaver();
-    final fileName = 'strategy_${DateTime.now().millisecondsSinceEpoch}.png';
+    final fileName = 'strategy_${DateTime.now().millisecondsSinceEpoch}';
     final result = kIsWeb
-        ? await saver.saveBytes(
+        ? await FileSaver.instance.saveFile(
+            name: fileName,
             bytes: bytes,
-            fileName: fileName,
-            mimeType: 'image/png',
+            fileExtension: 'png',
+            mimeType: MimeType.png,
           )
-        : await saver.saveBytesWithDialog(
+        : await FileSaver.instance.saveAs(
+            name: fileName,
             bytes: bytes,
-            fileName: fileName,
-            mimeType: 'image/png',
+            fileExtension: 'png',
+            mimeType: MimeType.png,
           );
-    return result?.isSuccess ?? false;
+    return result != null && result.isNotEmpty;
   }
 
   Widget _buildTitle(BuildContext context, {required bool showSubtitle}) {

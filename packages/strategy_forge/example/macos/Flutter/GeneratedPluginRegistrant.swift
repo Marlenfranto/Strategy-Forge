@@ -5,8 +5,8 @@
 import FlutterMacOS
 import Foundation
 
-import public_file_saver
+import file_saver
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  PublicFileSaverPlugin.register(with: registry.registrar(forPlugin: "PublicFileSaverPlugin"))
+  FileSaverPlugin.register(with: registry.registrar(forPlugin: "FileSaverPlugin"))
 }

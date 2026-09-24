@@ -3,19 +3,21 @@ description: Example app for the Strategy Forge editor package.
 publish_to: none
 version: 1.0.0+1
 environment:
-  sdk: ^3.6.0
-  flutter: ">=3.27.0"
+  sdk: ^3.11.0
+  flutter: ">=3.41.0"
 dependencies:
   flutter:
     sdk: flutter
   strategy_forge:
     path: ..
-  public_file_saver: ^1.2.0
+  file_saver: ^0.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
 flutter:
+  config:
+    enable-swift-package-manager: false
   uses-material-design: true
   assets:
     - assets/rinks/

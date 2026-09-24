@@ -6,9 +6,9 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <public_file_saver/public_file_saver_plugin_c_api.h>
+#include <file_saver/file_saver_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-  PublicFileSaverPluginCApiRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("PublicFileSaverPluginCApi"));
+  FileSaverPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("FileSaverPlugin"));
 }
