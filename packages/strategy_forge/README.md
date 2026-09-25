@@ -2,40 +2,39 @@
 
 [Pub.dev package](https://pub.dev/packages/strategy_forge) · [Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
 
-Strategy Forge is an embeddable Flutter strategy editor. It provides the canvas, editing behavior, responsive controls, document model, undo/redo history, JSON serialization, PNG generation, a complete tool catalog, and default tool artwork.
+Strategy Forge gives Flutter teams a production-ready strategy editor they can embed and shape around their own product. It brings together drawing, tactical notation, object placement, precise transforms, responsive controls, undo history, portable JSON, and PNG generation behind one configurable API.
 
 [![Strategy Forge editor example](screenshots/strategy-forge-editor.png)](https://marlenfranto.github.io/Strategy-Forge/)
 
-The package is intentionally domain-neutral:
+## Why developers choose Strategy Forge
 
-- it does not contain a sport selector;
-- it does not own field, court, rink, pool, or other strategy layouts;
-- it does not provide a runtime layout upload interface;
-- it does not persist documents or images;
-- it does not require a particular state-management or backend package.
+### Ship a capable editor sooner
 
-The embedding application supplies layouts, selects the enabled tools, optionally replaces icons or marker artwork, and decides where exported JSON and PNG bytes are stored.
+Use complete drawing and editing behavior without building gesture handling, selection geometry, transform controls, history, and export pipelines from the ground up. Users can create freehand paths, directional lines, shapes, multiline text, and markers, then move, scale, or rotate them with dedicated controls.
 
-## Features
+### Fit the editor to any strategy product
 
-- Host-defined asset, memory, or widget layouts with independent aspect ratios and thumbnails.
-- 23 core editing tools covering selection, tactical paths, lines, shapes, text, and a generic marker.
-- 34 bundled SVG markers from the original Pucks, Equipment, Nets, Players, Positions, and Numbers palettes.
-- 29 generic Teams, Objects, Targets, and Training markers.
-- 86 canonical catalog entries with stable IDs and compatibility aliases for former duplicates.
-- Bundled default SVG icons plus `CustomIcon.ttf` and `MyFlutterApp.ttf` glyphs.
-- Optional icon overrides for every tool.
-- Configurable colors and stroke widths.
-- Primary-color replacement for multicolor SVG markers while preserving outlines and details.
-- A **Default / Clear** color action that restores original marker artwork.
-- Multiline text creation and editing.
-- Selection of strokes, text, and markers with move, scale, and rotate interactions.
-- Separate scale handles and rotation handle, rotated selection frames, transform controls, and desktop cursors.
-- Responsive toolbars for compact, short, tablet, and desktop constraints.
-- Undo, redo, layout switching, and confirmed canvas clearing.
-- Versioned JSON import/export with normalized coordinates.
-- PNG export at a configurable pixel ratio.
-- Host-controlled UI through `showControls: false` and `StrategyEditorController`.
+Your application supplies every layout as an asset, memory image, or widget, with its own aspect ratio and thumbnail. Layouts are defined during integration and passed into the editor, so the same package can support different surfaces, workflows, and terminology while the host application keeps control of the experience.
+
+### Start with a complete, consistent toolbox
+
+The catalog contains 86 canonical tools with stable IDs across selection, tactical paths, lines, shapes, text, and markers. Default SVG artwork and the bundled `CustomIcon.ttf` and `MyFlutterApp.ttf` fonts make every tool usable immediately. Developers can enable only the tools a view needs and replace any toolbar icon or marker renderer with product-specific artwork.
+
+### Preserve visual detail while giving users control
+
+Configurable colors and stroke widths apply consistently across drawing tools. Multicolor SVG markers replace only their declared primary color, preserving outlines and secondary details, while **Default / Clear** restores the original artwork.
+
+### Keep strategy data portable
+
+Versioned JSON import and export use normalized coordinates, making saved strategies independent of the current viewport size. PNG generation supports a configurable pixel ratio for previews, downloads, and sharing. The host receives JSON and image bytes through callbacks and can store them in any local or remote system.
+
+### Integrate with the architecture you already use
+
+`StrategyEditorController` provides programmatic document, history, import, and export control. Set `showControls: false` to build a completely custom surrounding interface. Storage, sharing, state management, navigation, and backend choices remain with the embedding application.
+
+### Deliver polished interaction across Flutter targets
+
+Responsive controls adapt to compact, short, tablet, and desktop constraints. Touch-friendly targets, semantic labels, desktop cursors, separate scale and rotation handles, rotated selection frames, undo, redo, layout switching, and confirmed clearing provide a consistent editing experience across supported Flutter platforms.
 
 ## Requirements and dependencies
 

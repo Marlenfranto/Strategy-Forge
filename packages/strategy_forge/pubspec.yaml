@@ -13,6 +13,9 @@ topics:
   - drawing
   - diagram
   - editor
+screenshots:
+  - description: Strategy Forge editor with configurable layout and tool groups.
+    path: screenshots/strategy-forge-editor.png
 platforms:
   android:
   ios:
