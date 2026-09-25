@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1
+
+- Added a package screenshot and direct pub.dev documentation links.
+- Reworked the package overview around developer value, global reuse, and
+  customization across sports and visual strategy use cases.
+- Clarified host control over tools, playing surfaces, layouts, icons,
+  configuration, persistence, and export workflows.
+
 ## 0.1.0
 
 - Initial public release.
