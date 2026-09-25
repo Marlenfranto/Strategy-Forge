@@ -2,12 +2,16 @@
 
 [Pub.dev package](https://pub.dev/packages/strategy_forge) · [Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [Package source](packages/strategy_forge) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge)
 
+**A global strategy board for different sports, layouts, and visual planning workflows.**
+
+Strategy Forge gives Flutter developers control over the available tools, fields and playing surfaces, layouts, colors, icons, editor controls, and data handling for every strategy view. It can power coaching, training, planning, education, and other visual strategy use cases.
+
 This repository contains the reusable Flutter package and its complete example application:
 
 - **Reusable package** — [`packages/strategy_forge`](packages/strategy_forge) contains the generic editor, tool catalog, bundled icons, document model, and export APIs.
 - **Example app** — [`packages/strategy_forge/example`](packages/strategy_forge/example) is the package's runnable application and shows how a host configures, embeds, persists, and exports a strategy editor.
 
-Strategy Forge does not contain a sport selector or runtime layout upload flow. The host app defines its layouts in code, chooses the tools for each strategy view, and owns all storage and sharing behavior.
+The package provides the reusable editing engine while the host application supplies the sport or use-case context. Each integration defines its layouts and tool configuration in code and connects exported JSON and PNG data to its preferred storage and sharing workflow.
 
 [![Strategy Forge editor example](packages/strategy_forge/screenshots/strategy-forge-editor.png)](https://marlenfranto.github.io/Strategy-Forge/)
 

@@ -2,7 +2,11 @@
 
 [Pub.dev package](https://pub.dev/packages/strategy_forge) · [Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
 
-Strategy Forge gives Flutter teams a production-ready strategy editor they can embed and shape around their own product. It brings together drawing, tactical notation, object placement, precise transforms, responsive controls, undo history, portable JSON, and PNG generation behind one configurable API.
+**A global strategy board for different sports, layouts, and visual planning workflows.**
+
+Strategy Forge gives Flutter developers control over the available tools, fields and playing surfaces, layouts, colors, icons, editor controls, and data handling for every strategy view. It can power coaching, training, planning, education, operations, and other visual strategy use cases.
+
+The package brings together drawing, tactical notation, object placement, precise transforms, responsive controls, undo history, portable JSON, and PNG generation behind one configurable API. The reusable editing engine stays independent of any single sport or workflow, while the embedding application supplies the context its users need.
 
 [![Strategy Forge editor example](screenshots/strategy-forge-editor.png)](https://marlenfranto.github.io/Strategy-Forge/)
 
@@ -12,13 +16,13 @@ Strategy Forge gives Flutter teams a production-ready strategy editor they can e
 
 Use complete drawing and editing behavior without building gesture handling, selection geometry, transform controls, history, and export pipelines from the ground up. Users can create freehand paths, directional lines, shapes, multiline text, and markers, then move, scale, or rotate them with dedicated controls.
 
-### Fit the editor to any strategy product
+### Adapt it to different sports and use cases
 
-Your application supplies every layout as an asset, memory image, or widget, with its own aspect ratio and thumbnail. Layouts are defined during integration and passed into the editor, so the same package can support different surfaces, workflows, and terminology while the host application keeps control of the experience.
+Your application supplies every field, court, rink, pool, board, or custom surface as an asset, memory image, or widget, with its own aspect ratio and thumbnail. Layouts and configurations are defined during integration and passed into the editor, so each strategy view can expose the tools, terminology, and workflow required by its audience.
 
 ### Start with a complete, consistent toolbox
 
-The catalog contains 86 canonical tools with stable IDs across selection, tactical paths, lines, shapes, text, and markers. Default SVG artwork and the bundled `CustomIcon.ttf` and `MyFlutterApp.ttf` fonts make every tool usable immediately. Developers can enable only the tools a view needs and replace any toolbar icon or marker renderer with product-specific artwork.
+The catalog contains 86 canonical tools with stable IDs across selection, tactical paths, lines, shapes, text, and markers. Bundled default artwork makes every tool usable immediately. Developers can enable only the tools a view needs and replace any toolbar icon or marker renderer with product-specific artwork.
 
 ### Preserve visual detail while giving users control
 
@@ -620,8 +624,7 @@ The package declares:
 
 - `assets/tools/` for the original SVG artwork;
 - `assets/tools/universal/` for reusable marker artwork;
-- `assets/fonts/MyFlutterApp.ttf`;
-- `assets/fonts/CustomIcon.ttf`.
+- bundled glyph assets for the default editing-tool icons.
 
 Consumers receive these through the package dependency. Host-owned layouts and custom marker files remain in the host application's asset manifest.
 
