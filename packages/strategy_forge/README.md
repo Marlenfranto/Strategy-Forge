@@ -1,8 +1,10 @@
 # Strategy Forge
 
-[Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
+[Pub.dev package](https://pub.dev/packages/strategy_forge) · [Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge) · [Issue tracker](https://github.com/Marlenfranto/Strategy-Forge/issues)
 
 Strategy Forge is an embeddable Flutter strategy editor. It provides the canvas, editing behavior, responsive controls, document model, undo/redo history, JSON serialization, PNG generation, a complete tool catalog, and default tool artwork.
+
+[![Strategy Forge editor example](screenshots/strategy-forge-editor.png)](https://marlenfranto.github.io/Strategy-Forge/)
 
 The package is intentionally domain-neutral:
 
@@ -50,7 +52,7 @@ The package itself does not depend on file-system, sharing, networking, database
 
 ## Installation
 
-After the first release is available on pub.dev, install it with:
+Install the published package from [pub.dev](https://pub.dev/packages/strategy_forge):
 
 ```sh
 flutter pub add strategy_forge
@@ -75,7 +77,7 @@ Import the public library:
 import 'package:strategy_forge/strategy_forge.dart';
 ```
 
-Before the first pub.dev release, developers can use the Git repository:
+To test unreleased changes from the repository, use the Git dependency:
 
 ```yaml
 dependencies:
@@ -511,7 +513,7 @@ Future<void> generatePreview() async {
 }
 ```
 
-The repository's [`DemoHome`](https://github.com/Marlenfranto/Strategy-Forge/blob/main/lib/main.dart) implements ready-to-use `strategyJson`, `onStrategyJsonChanged`, `onStrategyImageGenerated`, `initialDownloadEnabled`, and `savePng` properties.
+The repository's [`DemoHome`](https://github.com/Marlenfranto/Strategy-Forge/blob/main/packages/strategy_forge/example/lib/main.dart) implements ready-to-use `strategyJson`, `onStrategyJsonChanged`, `onStrategyImageGenerated`, `initialDownloadEnabled`, and `savePng` properties.
 
 ## JSON import and export
 

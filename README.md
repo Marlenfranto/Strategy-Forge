@@ -1,6 +1,6 @@
 # Strategy Forge
 
-[Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [Reusable package](packages/strategy_forge) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge)
+[Pub.dev package](https://pub.dev/packages/strategy_forge) · [Live example app](https://marlenfranto.github.io/Strategy-Forge/) · [Package source](packages/strategy_forge) · [GitHub repository](https://github.com/Marlenfranto/Strategy-Forge)
 
 This repository contains the reusable Flutter package and its complete example application:
 
@@ -8,6 +8,8 @@ This repository contains the reusable Flutter package and its complete example a
 - **Example app** — [`packages/strategy_forge/example`](packages/strategy_forge/example) is the package's runnable application and shows how a host configures, embeds, persists, and exports a strategy editor.
 
 Strategy Forge does not contain a sport selector or runtime layout upload flow. The host app defines its layouts in code, chooses the tools for each strategy view, and owns all storage and sharing behavior.
+
+[![Strategy Forge editor example](packages/strategy_forge/screenshots/strategy-forge-editor.png)](https://marlenfranto.github.io/Strategy-Forge/)
 
 ## What the example app covers
 
