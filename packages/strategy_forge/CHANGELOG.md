@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Updated the hosted dependency example and removed a stale hard-coded version
+  reference from the package overview.
+
 ## 0.1.1
 
 - Added a package screenshot and direct pub.dev documentation links.

@@ -42,7 +42,7 @@ Responsive controls adapt to compact, short, tablet, and desktop constraints. To
 
 ## Requirements and dependencies
 
-The current package version is `0.1.0`. It requires Dart `^3.6.0` and Flutter 3.27 or later because it uses Flutter's wide-gamut color APIs.
+The package requires Dart `^3.6.0` and Flutter 3.27 or later because it uses Flutter's wide-gamut color APIs.
 
 | Dependency | Purpose |
 | --- | --- |
@@ -65,7 +65,7 @@ Or add the hosted dependency directly to the host app's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  strategy_forge: ^0.1.0
+  strategy_forge: ^0.1.2
 ```
 
 Then fetch dependencies:
